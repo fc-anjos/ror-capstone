@@ -48,4 +48,3 @@ coverage/
 
 # Ignore rvm gemset and ruby-version files
 .ruby-gemset*
-.ruby-version*
