@@ -9,7 +9,12 @@ require 'faker'
 
 3.times do
   user = User.create(
-    name: Faker::Name.unique.name
+    {
+      name: Faker::Name.unique.name,
+      email: Faker::Internet.unique.email,
+      password: '123456',
+      password_confirmation: '123456'
+    }
   )
 
   category = Category.create(
