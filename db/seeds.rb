@@ -36,4 +36,5 @@ categories.each do |category_name|
   )
 
   Vote.create(article: article, user: user)
+  Vote.create(article: article, user: user) if category_name == 'Fashion'
 end
