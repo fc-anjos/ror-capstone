@@ -1,1 +1,14 @@
-@import 'bootstrap'
+@import url('http://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
+
+$font-family-sans-serif: 'Cabin';
+
+@import 'bootstrap';
+@import 'header';
+
+.notice {
+  position: absolute;
+}
+
+.alert {
+  position: absolute;
+}

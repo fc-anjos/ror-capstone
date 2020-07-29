@@ -1,0 +1,19 @@
+<nav class="navbar text-muted">
+  <span class="logo">
+    LOGO
+  </span>
+
+  <div class="categories">
+    <% Category.categories_name.each do |category| %>
+      <%= content_tag(:span, category.upcase!, class: "category") %>
+    <% end %>
+  </div>
+
+  <div class="user-interaction">
+    <span>LOGIN</span>
+    |
+    <span>REGISTER</span>
+  </div>
+
+</nav>
+

@@ -7,7 +7,13 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-3.times do
+categories = %w[Fashion
+                Business
+                Sports
+                Entertainment
+                Magazine
+                TV]
+categories.each do |category_name|
   user = User.create(
     {
       name: Faker::Name.unique.name,
@@ -18,7 +24,7 @@ require 'faker'
   )
 
   category = Category.create(
-    name: Faker::Movie.title,
+    name: category_name,
     priority: rand(0..10)
   )
 
