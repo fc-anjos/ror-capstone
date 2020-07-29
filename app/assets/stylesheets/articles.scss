@@ -1,3 +1,15 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.row > * {
+  border: 2px solid red;
+}
+
+.main {
+  height: calc(100vh - #{$navbar-height});
+}
+
+.top-row {
+  flex-grow: 3;
+}
+
+.bottom-row {
+  flex-grow: 1;
+}

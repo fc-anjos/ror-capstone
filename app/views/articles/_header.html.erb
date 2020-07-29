@@ -4,8 +4,9 @@
   </span>
 
   <div class="categories">
+    <span class="category">Home</span>
     <% Category.categories_name.each do |category| %>
-      <%= content_tag(:span, category.upcase!, class: "category") %>
+      <%= content_tag(:span, category, class: "category") %>
     <% end %>
   </div>
 

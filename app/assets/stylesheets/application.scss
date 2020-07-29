@@ -1,9 +1,11 @@
 @import url('http://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
 
 $font-family-sans-serif: 'Cabin';
+$navbar-height: 80px;
 
 @import 'bootstrap';
 @import 'header';
+@import 'articles';
 
 .notice {
   position: absolute;
@@ -11,4 +13,12 @@ $font-family-sans-serif: 'Cabin';
 
 .alert {
   position: absolute;
+}
+
+.category {
+  text-transform: uppercase;
+}
+
+.main {
+  display: grid;
 }
