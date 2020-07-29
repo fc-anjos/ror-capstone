@@ -12,9 +12,17 @@ require 'faker'
     name: Faker::Name.unique.name
   )
 
-  article = Article.create(author: user,
-                 title: Faker::Movie.title,
-                 text: Faker::Movie.quote
-                )
+  category = Category.create(
+    name: Faker::Movie.title,
+    priority: rand(0..10)
+  )
+
+  article = Article.create(
+    author: user,
+    title: Faker::Movie.title,
+    text: Faker::Movie.quote,
+    categories: [category]
+  )
+
   Vote.create(article: article, user: user)
 end
