@@ -13,7 +13,8 @@ categories = %w[Fashion
                 Entertainment
                 Magazine
                 TV]
-categories.each do |category_name|
+
+categories.each_with_index do |category_name, i|
   user = User.create(
     {
       name: Faker::Name.unique.name,
@@ -25,7 +26,7 @@ categories.each do |category_name|
 
   category = Category.create(
     name: category_name,
-    priority: rand(0..10)
+    priority: i+1
   )
 
   article = Article.create(

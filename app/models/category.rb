@@ -8,4 +8,8 @@ class Category < ApplicationRecord
   def most_recent_article
     articles.order('created_at desc').first
   end
+
+  def self.top(number)
+    order('priority').limit(number)
+  end
 end
