@@ -3,26 +3,25 @@
   <div class="container-fluid d-flex flex-column">
     <div class="row top-row">
 
-      <div class="col-9 d-flex justify-content-end flex-column">
-        <h2 class="text-primary d-block">
+      <div class="col-9 d-flex justify-content-end flex-column gradient-bottom">
+        <h2 class="text-primary d-block z-top">
           <%= Article.most_voted.title %>
         </h2>
-        <p class="m-0 p-0 d-block">
+        <span class="m-0 p-0 d-block z-top text-white">
           <%= Article.most_voted.text %>
-        </p>
+        </span>
       </div>
-      <div class="col-3">
+      <div class="col-3 gradient-bottom">
       </div>
     </div>
     <div class="row bottom-row">
-      <div class="col-3">
-      </div>
-      <div class="col-3">
-      </div>
-      <div class="col-3">
-      </div>
-      <div class="col-3">
-      </div>
+      <% Category.top(4).each do |category| %>
+        <div class="col-3 gradient-top-bottom">
+          <h3 class="d-inline-block">
+            <%= category.name %>
+          </h3>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

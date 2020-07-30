@@ -3,15 +3,11 @@
 $font-family-sans-serif: 'Cabin';
 $navbar-height: 80px;
 $primary: #f76208;
+$secondary: #efee18;
 
 @import 'bootstrap';
 @import 'header';
 @import 'articles';
-
-h2 {
-  font-size: 1em;
-  font-weight: 700;
-}
 
 .notice {
   position: absolute;
@@ -21,10 +17,27 @@ h2 {
   position: absolute;
 }
 
-.category {
-  text-transform: uppercase;
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
 }
 
-.main {
-  display: grid;
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  margin-top: 20px;
+}
+
+h3::after {
+  $overflow: 10px;
+
+  position: relative;
+  top: 2px;
+  right: $overflow/2;
+  display: block;
+  content: '';
+  border-bottom: 3px solid $secondary;
+  width: calc(100% + #{$overflow});
 }
