@@ -8,6 +8,11 @@ $primary: #f76208;
 @import 'header';
 @import 'articles';
 
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
 .notice {
   position: absolute;
 }
