@@ -8,7 +8,7 @@
         style='background-image: url("<%= Article.most_voted.image %>");'>
       </div>
 
-      <div class="content">
+      <div class="content most-voted-content">
         <h2 class="text-primary d-block z-top">
           <%= Article.most_voted.title %>
         </h2>
@@ -33,10 +33,13 @@
         <div class="image"
           style='background-image: url("<%= category.most_recent_article.image %>");'>
         </div>
-        <h3 class="d-inline-block mt-3 ml-3">
+        <h3 class="d-inline-block mt-3 ml-3 category-name">
           <%= category.name %>
         </h3>
 
+        <h4 class="category-title">
+          <%= category.most_recent_article.title %>
+        </h4>
       </div>
     <% end %>
   </div>

@@ -73,3 +73,45 @@
   margin: 0;
   padding: 0;
 }
+
+.category-title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.category-title,
+.most-voted-content {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  margin-top: 20px;
+}
+
+.category-name,
+.category-title,
+.most-voted-content {
+  margin-left: 20px;
+}
+
+.category-name {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  margin-top: 20px;
+}
+
+.category-name::after {
+  $overflow: 10px;
+
+  position: relative;
+  top: 2px;
+  right: $overflow/2;
+  display: block;
+  content: '';
+  border-bottom: 2px solid $secondary;
+  width: calc(100% + #{$overflow});
+}
