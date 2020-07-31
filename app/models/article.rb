@@ -8,4 +8,5 @@ class Article < ApplicationRecord
       .order('COUNT(articles.id) DESC')
       .first
   }
+  has_one_attached :image
 end

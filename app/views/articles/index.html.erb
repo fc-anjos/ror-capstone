@@ -1,9 +1,14 @@
 <%= render 'header' %>
-<div class="main">
-  <div class="container-fluid d-flex flex-column">
-    <div class="row top-row">
+<div class="main d-flex flex-column">
 
-      <div class="col-9 d-flex justify-content-end flex-column gradient-bottom">
+  <div class="top-row d-flex gradient-bottom">
+    <div class="main-article d-flex justify-content-end flex-column">
+
+      <div class="image"
+        style='background-image: url("<%= Article.most_voted.image %>");'>
+      </div>
+
+      <div class="content">
         <h2 class="text-primary d-block z-top">
           <%= Article.most_voted.title %>
         </h2>
@@ -11,17 +16,28 @@
           <%= Article.most_voted.text %>
         </span>
       </div>
-      <div class="col-3 gradient-bottom">
+    </div>
+
+    <div class="weather-forecast ">
+      <div class="image"
+        style='background-image: url("https://source.unsplash.com/featured/?Winter");
+        '>
       </div>
     </div>
-    <div class="row bottom-row">
-      <% Category.top(4).each do |category| %>
-        <div class="col-3 gradient-top-bottom">
-          <h3 class="d-inline-block">
-            <%= category.name %>
-          </h3>
+  </div>
+
+  <div class="bottom-row d-flex">
+    <% Category.top(4).each do |category| %>
+      <div class="gradient-top-bottom position-relative">
+
+        <div class="image"
+          style='background-image: url("<%= category.most_recent_article.image %>");'>
         </div>
-      <% end %>
-    </div>
+        <h3 class="d-inline-block mt-3 ml-3">
+          <%= category.name %>
+        </h3>
+
+      </div>
+    <% end %>
   </div>
 </div>
