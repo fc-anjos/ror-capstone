@@ -13,7 +13,7 @@
   <ul class="user-interaction d-flex flex-row list-unstyled justify-content-center p-0 m-0">
     <% if !user_signed_in? && controller_name != 'sessions' %>
       <li class=''>
-        <%= link_to('login', new_user_session_path, class: "text-white text-decoration-none mr-1")  %>
+        <%= link_to('login', new_user_session_path, class: "text-decoration-none mr-1")  %>
       </li>
     <% end %>
 
@@ -23,16 +23,10 @@
       </li>
     <% end %>
 
-    <% if !user_signed_in? && controller_name != 'registrations' %>
-      <li class=''>
-        <%= link_to('login', new_user_session_path, class: "text-decoration-none ml-1")  %>
-      </li>
-  <% end %>
-
     <% if user_signed_in? && controller_name != 'users' %>
       <li class=''>
           <i class="fa fa-user-circle-o text-white mr-1"></i>
-          <%= current_user.name %>
+          <%= content_tag(:span, current_user.name, class: "mr-1") %>
       </li>
       <% end %>
 
