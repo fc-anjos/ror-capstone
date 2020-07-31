@@ -33,6 +33,7 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails', '~> 4.4'
 gem 'google-cloud-storage', '~> 1.27'
 gem 'carrierwave', '~> 2.1'
+gem 'friendly_id', '~> 5.2.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
