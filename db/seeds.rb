@@ -7,6 +7,16 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+User.create(
+    {
+      name: 'Felipe',
+      email: 'felipe.anjos@usp.br',
+      password: '123456',
+      password_confirmation: '123456'
+    }
+  )
+
 categories = %w[Fashion
                 Business
                 Sports
@@ -15,6 +25,7 @@ categories = %w[Fashion
                 TV]
 
 categories.each_with_index do |category_name, i|
+
   user = User.create(
     {
       name: Faker::Name.unique.name,
@@ -26,14 +37,15 @@ categories.each_with_index do |category_name, i|
 
   category = Category.create(
     name: category_name,
-    priority: i+1
+    priority: i + 1
   )
 
   article = Article.create(
     author: user,
     title: Faker::Movie.title,
     text: Faker::Movie.quote,
-    categories: [category]
+    categories: [category],
+    image: "https://source.unsplash.com/featured/?#{category.name}"
   )
 
   Vote.create(article: article, user: user)
