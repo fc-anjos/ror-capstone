@@ -3,12 +3,19 @@
     <div class="article-container d-inline-block w-50 m-0 p-0">
       <div class="article">
         <div class="square"></div>
-        <div class="square">
-          <h2 class="name d-inline-block p-3">
+        <div class="square p-3">
+          <h2 class="name d-inline-block">
             <%= @category.name %>
           </h2>
+          <h3 class="article-title">
+            <%= article.title %>
+          </h3>
+          <span>
+            <%= simple_format(truncate(article.text, length: 400)) %>
+          </span>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+

@@ -2,11 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   height: 100vh;
-  border: 2px solid red;
 }
 
 .article-container {
-  border: 1px solid red;
 }
 
 .article {
@@ -23,18 +21,20 @@
 
 .square .name {
   color: $primary;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 700;
 }
 
 .name::after {
-  $overflow: 10px;
-
   position: relative;
   top: 2px;
-  right: $overflow/2;
   display: block;
   content: '';
   border-bottom: 2px solid $primary;
-  width: calc(100% + #{$overflow});
+  width: calc(100%);
+}
+
+.article-title {
+  font-size: 1em;
+  font-weight: 700;
 }

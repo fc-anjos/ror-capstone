@@ -42,12 +42,11 @@ categories.each_with_index do |category_name, i|
     article = Article.create(
       author: user,
       title: Faker::Movie.title,
-      text: Faker::Movie.quote,
+      text: Faker::Lorem.paragraphs(number: 20).map { |s| "#{s}" }.join("\n\n"),
       categories: [category],
       image: "https://source.unsplash.com/featured/?#{category.name}"
     )
     Vote.create(article: article, user: user)
     Vote.create(article: article, user: user) if category_name == 'Fashion'
   end
-
 end
