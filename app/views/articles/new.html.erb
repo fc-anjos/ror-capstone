@@ -12,9 +12,11 @@
       <%= f.text_field :image, autocomplete: "image" %>
     </div>
 
-    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |g| %>
-      <% g.label(class: "checkbox-inline input_checkbox mr-3") { g.check_box(class: "checkbox mr-1") + g.text } %>
-    <% end %>
+
+      <% Category.all.each do |category| %>
+       <%= check_box_tag "categories[]", category.id %>
+       <%= category.name %>
+      <% end %>
 
 
     <div class="field">

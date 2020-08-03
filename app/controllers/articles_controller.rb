@@ -7,7 +7,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.author_id = current_user
+    @categories = Category.find(params[:categories])
+    @article.categories = @categories
+    @article.author_id = current_user.id
     @article.save
 
     if @article.save
@@ -20,6 +22,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:picture)
+    params.require(:article).permit(%i[title image text])
   end
 end
