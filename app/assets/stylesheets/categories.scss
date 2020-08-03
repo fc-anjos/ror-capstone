@@ -1,3 +1,40 @@
-// Place all the styles related to the Categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  border: 2px solid red;
+}
+
+.article-container {
+  border: 1px solid red;
+}
+
+.article {
+  display: flex;
+  height: 100%;
+}
+
+.square {
+  border: 1px solid black;
+  margin-bottom: auto;
+  height: 100%;
+  width: 50%;
+}
+
+.square .name {
+  color: $primary;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.name::after {
+  $overflow: 10px;
+
+  position: relative;
+  top: 2px;
+  right: $overflow/2;
+  display: block;
+  content: '';
+  border-bottom: 2px solid $primary;
+  width: calc(100% + #{$overflow});
+}
