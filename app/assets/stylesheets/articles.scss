@@ -3,7 +3,7 @@
 }
 
 .main {
-  height: calc(100vh - #{$navbar-height} - (#{$margin-width} * 2));
+  height: calc(100vh + 8px - #{$navbar-height} - (#{$margin-width} * 2));
 }
 
 .top-row {

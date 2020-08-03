@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  height: 100vh;
+  height: $main-height;
 }
 
 .article-container {
@@ -17,6 +17,7 @@
   margin-bottom: auto;
   height: 100%;
   width: 50%;
+  position: relative;
 }
 
 .square .name {
@@ -35,6 +36,12 @@
 }
 
 .article-title {
-  font-size: 1em;
+  font-size: 1.3em;
+  margin: 0.5em 0 0.5em;
   font-weight: 700;
+}
+
+.article-text * {
+  margin-bottom: 0.6em;
+  line-height: 1.1em;
 }

@@ -6,6 +6,7 @@ $navbar-height: 80px;
 $primary: #f76208;
 $secondary: #efee18;
 $margin-color: #4e443f;
+$main-height: calc(100vh - #{$navbar-height} - (#{$margin-width} * 2));
 
 @import 'bootstrap';
 @import 'header';

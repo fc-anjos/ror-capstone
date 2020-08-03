@@ -6,7 +6,7 @@
   <div class="categories">
     <%= link_to("Home", root_path, class: "category") %>
     <% Category.categories_name.each do |category| %>
-      <%= link_to("#{category}", "categories/#{category.downcase}", class: "category") %>
+    <%= link_to("#{category}", category_path(category.downcase), class: "category") %>
     <% end %>
   </div>
 
