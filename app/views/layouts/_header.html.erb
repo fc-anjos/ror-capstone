@@ -4,7 +4,8 @@
   </span>
 
   <div class="categories">
-    <%= link_to("Home", root_path, class: "category") %>
+    <%= link_to("Home", root_path, class: "link") %>
+    <%= link_to("Write an article", new_article_path, class: "link") %>
     <% Category.categories_name.each do |category| %>
     <%= link_to("#{category}", category_path(category.downcase), class: "category") %>
     <% end %>

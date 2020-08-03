@@ -1,0 +1,30 @@
+<h2>Log in</h2>
+
+<div class="container main">
+  <%= form_for :article, url: articles_path do |f| %>
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, autofocus: true, autocomplete: "Title" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.text_field :image, autocomplete: "image" %>
+    </div>
+
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |g| %>
+      <% g.label(class: "checkbox-inline input_checkbox mr-3") { g.check_box(class: "checkbox mr-1") + g.text } %>
+    <% end %>
+
+
+    <div class="field">
+      <%= f.label :text %><br />
+      <%= f.text_area :text, autocomplete: "Text" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Create Article" %>
+    </div>
+
+  </div>
+<% end %>
