@@ -38,7 +38,7 @@ categories.each_with_index do |category_name, i|
     priority: i + 1
   )
 
-  1.times do
+  10.times do
     article = Article.create(
       author: user,
       title: Faker::Movie.title,
