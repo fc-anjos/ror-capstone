@@ -6,6 +6,7 @@ $navbar-height: 80px;
 $primary: #f76208;
 $secondary: #efee18;
 $margin-color: #4e443f;
+$light: #ccc;
 $main-height: calc(100vh - #{$navbar-height} - (#{$margin-width} * 2));
 
 @import 'bootstrap';
@@ -48,4 +49,18 @@ footer * {
 footer > .center > * {
   display: inline-block;
   margin: 0 7px 0 7px;
+}
+
+.text-brown {
+  color: $margin-color;
+}
+
+.user-interaction > *:not(:last-child) {
+  border-right: 1px solid $light;
+  margin-right: 0.4em;
+  padding-right: 0.4em;
+}
+
+.user-interaction li {
+  line-height: 1em;
 }

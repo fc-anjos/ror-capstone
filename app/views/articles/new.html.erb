@@ -2,30 +2,35 @@
 
 <div class="container main">
   <%= form_for :article, url: articles_path do |f| %>
-    <div class="field">
-      <%= f.label :title %><br />
-      <%= f.text_field :title, autofocus: true, autocomplete: "Title" %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, autofocus: true, autocomplete: "Title", class: 'form-control' %>
     </div>
 
-    <div class="field">
-      <%= f.label :image %><br />
-      <%= f.text_field :image, autocomplete: "image" %>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, autocomplete: "image", class: 'form-control' %>
     </div>
 
 
-      <% Category.all.each do |category| %>
+    <%= f.label :categories %>
+    <div class="d-flex justify-content-between">
+    <% Category.all.each do |category| %>
+      <div>
        <%= check_box_tag "categories[]", category.id %>
        <%= category.name %>
-      <% end %>
-
-
-    <div class="field">
-      <%= f.label :text %><br />
-      <%= f.text_area :text, autocomplete: "Text" %>
+      </div>
+    <% end %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Create Article" %>
+
+    <div class="form-group">
+      <%= f.label :text %>
+      <%= f.text_area :text, autocomplete: "Text", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Create Article", class: 'form-control btn btn-outline-primary' %>
     </div>
 
   </div>

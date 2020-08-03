@@ -14,30 +14,29 @@
   <ul class="user-interaction d-flex flex-row list-unstyled justify-content-center p-0 m-0">
     <% if !user_signed_in? && controller_name != 'sessions' %>
       <li class=''>
-        <%= link_to('login', new_user_session_path, class: "text-decoration-none mr-1")  %>
+        <%= link_to('LOGIN', new_user_session_path, class: "text-decoration-none text-brown")  %>
       </li>
     <% end %>
 
     <% if !user_signed_in? && controller_name != 'registrations' %>
       <li class=''>
-        <%= link_to('register', new_user_registration_path, class: "text-decoration-none ml-1")  %>
+        <%= link_to('REGISTER', new_user_registration_path, class: "text-decoration-none ml-1 text-brown")  %>
       </li>
     <% end %>
 
     <% if user_signed_in? && controller_name != 'users' %>
       <li class=''>
-          <i class="fa fa-user-circle-o text-white mr-1"></i>
-          <%= content_tag(:span, current_user.name, class: "mr-1") %>
+          <i class="fa fa-user-circle-o text-white"></i>
+          <%= content_tag(:span, current_user.name) %>
       </li>
       <% end %>
 
       <% if user_signed_in? %>
         <li class=''>
-          <%= link_to('logout', destroy_user_session_path, method: :delete, class: "text-decoration-none mr-1", id:"log-out")  %>
+          <%= link_to('LOGOUT', destroy_user_session_path, method: :delete, class: "text-decoration-none text-brown", id:"log-out")  %>
         </li>
       <% end %>
 
     </ul>
 
 </nav>
-
