@@ -4,9 +4,9 @@
   </span>
 
   <div class="categories">
-    <span class="category text-primary">Home</span>
+    <%= link_to("Home", root_path, class: "category") %>
     <% Category.categories_name.each do |category| %>
-      <%= content_tag(:span, category, class: "category") %>
+      <%= link_to("#{category}", "categories/#{category.downcase}", class: "category") %>
     <% end %>
   </div>
 

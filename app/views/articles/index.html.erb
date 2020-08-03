@@ -34,7 +34,7 @@
           style='background-image: url("<%= category.most_recent_article.image %>");'>
         </div>
         <h3 class="d-inline-block mt-3 ml-3 category-name">
-          <%= category.name %>
+          <%= link_to("#{category.name}", "categories/#{category.name}") %>
         </h3>
 
         <h4 class="category-title">
