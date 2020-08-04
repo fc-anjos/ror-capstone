@@ -46,8 +46,13 @@ categories.each_with_index do |category_name, i|
       text: Faker::Lorem.paragraphs(number: 20).map(&:to_s).join("\n\n"),
       categories: [category]
     )
-    sleep(2)
+    url = "https://source.unsplash.com/featured/?#{category.name}"
     article.remote_image_url = "https://source.unsplash.com/featured/?#{category.name}"
+    sleep(1)
+    URI.open(url)
+    sleep(1)
+    URI.open(url)
+    sleep(1)
     article.save
     Vote.create(article: article, user: user)
     Vote.create(article: article, user: user) if category_name == 'Fashion'
