@@ -4,7 +4,7 @@
     <div class="main-article d-flex justify-content-end flex-column">
 
       <div class="image"
-        style='background-image: url("<%= Article.most_voted.image %>");'>
+        style='background-image: url("<%= Article.most_voted.image.url %>");'>
       </div>
 
       <div class="content most-voted-content">
@@ -30,7 +30,7 @@
       <div class="gradient-top-bottom position-relative">
 
         <div class="image"
-          style='background-image: url("<%= category.most_recent_article.image %>");'>
+          style='background-image: url("<%= category.most_recent_article.image.url %>");'>
         </div>
         <h3 class="d-inline-block mt-3 ml-3 category-name">
           <%= link_to("#{category.name}", "categories/#{category.name}") %>

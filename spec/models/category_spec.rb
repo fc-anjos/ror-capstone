@@ -11,8 +11,8 @@ RSpec.describe Category, type: :model do
   context 'Fetch most recent article' do
     let(:user) { create :user }
     let(:category) { create :category, :priority_1, :fashion }
-    let!(:article1) { create :article, author: user, categories: [category], image: 'test' }
-    let!(:article2) { create :article, author: user, categories: [category], image: 'test' }
+    let!(:article1) { create :article, author: user, categories: [category] }
+    let!(:article2) { create :article, author: user, categories: [category] }
 
     it 'Grabs the last created article' do
       expect(category.most_recent_article).to eql(article2)

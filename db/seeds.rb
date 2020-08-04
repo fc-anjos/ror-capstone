@@ -1,4 +1,5 @@
 require 'faker'
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -38,14 +39,16 @@ categories.each_with_index do |category_name, i|
     priority: i + 1
   )
 
-  10.times do
-    article = Article.create(
+  4.times do
+    article = Article.new(
       author: user,
       title: Faker::Movie.title,
-      text: Faker::Lorem.paragraphs(number: 20).map { |s| "#{s}" }.join("\n\n"),
-      categories: [category],
-      image: "https://source.unsplash.com/featured/?#{category.name}"
+      text: Faker::Lorem.paragraphs(number: 20).map(&:to_s).join("\n\n"),
+      categories: [category]
     )
+    sleep(2)
+    article.remote_image_url = "https://source.unsplash.com/featured/?#{category.name}"
+    article.save
     Vote.create(article: article, user: user)
     Vote.create(article: article, user: user) if category_name == 'Fashion'
   end

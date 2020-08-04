@@ -31,9 +31,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails', '~> 4.4'
-gem 'google-cloud-storage', '~> 1.27'
-gem 'carrierwave', '~> 2.1'
 gem 'friendly_id', '~> 5.2.4'
+
+gem 'carrierwave-aws'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+gem 'aws-sdk-rails'
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
