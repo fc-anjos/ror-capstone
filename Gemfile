@@ -33,11 +33,13 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails', '~> 4.4'
 gem 'friendly_id', '~> 5.2.4'
 
-gem 'carrierwave-aws'
+gem 'carrierwave-aws', '~> 1.5'
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick'
-gem 'aws-sdk-rails'
-gem 'figaro'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'figaro', '~> 1.2'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'md_simple_editor', '~> 0.5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
