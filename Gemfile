@@ -60,7 +60,7 @@ end
 group :test do
   gem 'capybara', '~> 3.33'
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.24'
-  gem 'simplecov', '~> 0.18.5'
+  gem 'simplecov', '~> 0.18.5', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
