@@ -6,7 +6,7 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -30,15 +30,14 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'bootstrap', '~> 4.5'
+gem 'bootstrap-sass-rails'
 gem 'jquery-rails', '~> 4.4'
 gem 'friendly_id', '~> 5.2.4'
 
 gem 'carrierwave-aws', '~> 1.5'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 2.0'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
-gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'figaro', '~> 1.2'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'md_simple_editor', '~> 0.5.0'
 
 group :development, :test do
