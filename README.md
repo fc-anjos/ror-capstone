@@ -1,7 +1,7 @@
 # Stay In Touch - Social media app built with Ruby on Rails
 
-> This repo includes code for the social media app Stay In Touch, developed as part of Microverse's Full Stack Development Program.
-
+> This repo includes code for the social media app Stay In Touch, developed as part of Microverse's Full Stack Development Program.  
+[Design idea](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) by Nelson [Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 ![index screenshot](docs/screenshot.png)
 
 [entity-relationship Diagram](docs/erd.pdf)
