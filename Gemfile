@@ -39,7 +39,7 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 # gem 'aws-sdk-rails'
 gem 'faker', '~> 2.13'
 gem 'figaro', '~> 1.2'
-
+gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

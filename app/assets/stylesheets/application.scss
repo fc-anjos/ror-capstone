@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
-
 $font-family-sans-serif: 'Cabin';
 $margin-width: 8px;
 $primary: #f76208;
@@ -8,6 +6,11 @@ $margin-color: #4e443f;
 $light: #ccc;
 $navbar-height: 80px;
 $main-height: calc(100vh + 5px - #{$navbar-height} - (#{$margin-width} * 3));
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
+@import 'bootstrap';
+@import 'partials/*';
+@import './actiontext.scss';
 
 .main-height {
   height: $main-height;
@@ -30,7 +33,10 @@ trix-editor {
   display: none;
 }
 
-// @import "utilities/variables";
-@import 'bootstrap';
-@import 'partials/*';
-@import './actiontext.scss';
+$logo-height: 80%;
+
+.logo {
+  height: $logo-height;
+  position: relative;
+  top: calc((100% - #{$logo-height}) / 2);
+}

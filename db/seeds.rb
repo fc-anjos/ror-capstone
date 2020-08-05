@@ -17,12 +17,12 @@ User.create(
   }
 )
 
-categories = %w[Fashion
+categories = %w[Politics
                 Business
                 Sports
-                Entertainment
-                Magazine
-                TV]
+                Style
+                Food
+                Books]
 
 categories.each_with_index do |category_name, i|
   user = User.create(

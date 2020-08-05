@@ -1,7 +1,7 @@
-<nav class="navbar text-muted d-flex align-items-center>
-  <span class="logo">
-    LOGO
-  </span>
+<nav class="navbar text-muted d-flex align-items-center">
+  <div class="logo-container h-100">
+    <%= image_tag "logo-marrom.svg", class: 'logo'%>
+  </div>
 
   <div class="categories">
     <%= link_to("Home", root_path, class: "link") %>
@@ -38,5 +38,4 @@
       <% end %>
 
     </ul>
-
 </nav>
