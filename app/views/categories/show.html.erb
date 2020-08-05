@@ -15,7 +15,7 @@
             <%= article.title %>
           </h3>
           <div class="article-text">
-            <%= simple_format(truncate(article.text, length: 500, separator: "\n", class: 'article-text')) %>
+            <%= simple_format(truncate(article.text.to_plain_text, length: 500, class: 'article-text')) %>
           </div>
           <%= link_to('Read More', article_path) %>
         </div>

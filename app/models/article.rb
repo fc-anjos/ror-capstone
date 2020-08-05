@@ -9,4 +9,5 @@ class Article < ApplicationRecord
       .order('COUNT(articles.id) DESC')
       .first
   }
+  has_rich_text :text
 end

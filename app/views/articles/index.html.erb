@@ -12,7 +12,7 @@
           <%= Article.most_voted.title %>
         </h2>
         <span class="m-0 p-0 d-block z-top text-white">
-          <%= Article.most_voted.text %>
+          <%= Article.most_voted.text.to_plain_text %>
         </span>
       </div>
     </div>

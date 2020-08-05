@@ -8,8 +8,8 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :image %>
-      <%= f.file_field :image, autocomplete: "image", class: 'form-control' %>
+      <%= f.label :text %>
+      <%= f.rich_text_area :text, autocomplete: "Text", class: 'form-control' %>
     </div>
 
     <%= f.label :categories %>
@@ -22,10 +22,9 @@
     <% end %>
     </div>
 
-
     <div class="form-group">
-      <%= f.label :text %>
-      <%= f.text_area :text, autocomplete: "Text", class: 'form-control' %>
+      <%= f.label :image %>
+      <%= f.file_field :image, autocomplete: "image", class: 'form-control' %>
     </div>
 
     <div class="form-group">
