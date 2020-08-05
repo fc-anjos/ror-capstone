@@ -6,7 +6,7 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -33,18 +33,18 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails', '~> 4.4'
 gem 'friendly_id', '~> 5.2.4'
 
-gem 'carrierwave-aws'
-gem 'carrierwave', '~> 1.0'
-gem 'mini_magick'
-gem 'aws-sdk-rails'
-gem 'figaro'
+gem 'carrierwave-aws', '~> 1.5'
+gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+# gem 'aws-sdk-rails'
+gem 'figaro', '~> 1.2'
+gem 'faker', '~> 2.13'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
-  gem 'faker', '~> 2.13'
   gem 'factory_bot_rails', '~> 6.1'
   gem 'awesome_print', '~> 1.8'
 end
