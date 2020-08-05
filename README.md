@@ -1,24 +1,65 @@
-# README
+# Stay In Touch - Social media app built with Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This repo includes code for the social media app Stay In Touch, developed as part of Microverse's Full Stack Development Program.
 
-Things you may want to cover:
+![index screenshot](docs/screenshot.png)
 
-* Ruby version
+### Check it online!
+[Live preview](https://calm-coast-20210.herokuapp.com/)
 
-* System dependencies
+## Built With
+- Ruby v2.7.0
+- Ruby on Rails v5.2.4.1
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running clone this repository to your
+computer.
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+Ruby: 2.7.0
+Rails: 5.2.4.1
+Postgres: >=12.3
+```
+   rails db:create
+   rails db:migrate
+   rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Usage
 
-* Deployment instructions
+#### Set up your credentials
 
-* ...
+edit config/application.yml.example with your credentials, and move it to config/application.yml
+
+Start server with:
+
+```
+    rails server
+```
+Open `http://localhost:3000/` in your browser.
+
+### Run tests from root directory
+
+```
+    bundle exec rspec
+```
+
+## Author
+
+👤Felipe dos Anjos
+
+- Github: [@githubhandle](https://github.com/fc-anjos)
+- Linkedin: [linkedin](https://linkedin.com/in/fc-anjos)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues
+page](https://www.github.com/fc-anjos/ror-capstone/issues/).
