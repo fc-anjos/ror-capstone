@@ -1,7 +1,5 @@
-@import "utilities/variables";
-
 .main {
-  height: calc(100vh + 8px - #{$navbar-height} - (#{$margin-width} * 2));
+  height: $main-height;
 }
 
 .top-row {
