@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: none;
+}
+
 .main {
   height: $main-height;
 }
@@ -12,10 +16,14 @@
 
 .notice {
   position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .alert {
   position: absolute;
+  top: -2px;
+  left: -6px;
 }
 
 h2 {

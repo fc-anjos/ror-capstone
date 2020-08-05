@@ -9,6 +9,24 @@ $light: #ccc;
 $navbar-height: 80px;
 $main-height: calc(100vh + 5px - #{$navbar-height} - (#{$margin-width} * 3));
 
+.main-height {
+  height: $main-height;
+}
+
+trix-editor {
+  &.custom-height {
+    min-height: 15em;
+    width: 58.5vw;
+    overflow: scroll;
+  }
+}
+
+.trix-button--icon-increase-nesting-level,
+.trix-button--icon-decrease-nesting-level,
+.trix-button--icon-attach {
+  display: none;
+}
+
 // @import "utilities/variables";
 @import 'bootstrap';
 @import 'partials/*';

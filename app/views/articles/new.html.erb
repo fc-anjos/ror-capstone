@@ -1,15 +1,17 @@
 <h2>Log in</h2>
 
-<div class="container main">
+<div class="container main-height">
   <%= form_for :article, url: articles_path do |f| %>
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, autofocus: true, autocomplete: "Title", class: 'form-control' %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :text %>
-      <%= f.rich_text_area :text, autocomplete: "Text", class: 'form-control' %>
+    <div class="w-100">
+      <div class="trix">
+        <%= f.label :text %>
+        <%= f.rich_text_area :text, autocomplete: "Text", class: 'custom-height col'%>
+      </div>
     </div>
 
     <%= f.label :categories %>

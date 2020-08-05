@@ -12,8 +12,7 @@ RSpec.describe Category, type: :model do
       let!(:article2) { create :article }
 
       it 'Grabs the last created article' do
-        byebug
-        # expect(category.most_recent_article).to eql(article2)
+        expect(category.most_recent_article).to eql(article2)
       end
     end
   end
