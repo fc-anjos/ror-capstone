@@ -1,18 +1,12 @@
-@import url('http://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
+@import "utilities/variables";
 
-$font-family-sans-serif: 'Cabin';
-$margin-width: 8px;
-$navbar-height: 80px;
-$primary: #f76208;
-$secondary: #efee18;
-$margin-color: #4e443f;
-$light: #ccc;
-$main-height: calc(100vh - #{$navbar-height} - (#{$margin-width} * 2));
+.main {
+  height: calc(100vh + 8px - #{$navbar-height} - (#{$margin-width} * 2));
+}
 
-@import 'bootstrap';
-@import 'header';
-@import 'articles';
-@import 'categories';
+.top-row {
+  height: 66.666%;
+}
 
 .m-brown {
   border: $margin-width solid $margin-color;

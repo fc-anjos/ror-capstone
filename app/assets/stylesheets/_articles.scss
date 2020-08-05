@@ -1,13 +1,7 @@
+@import 'utilities/variables';
+
 .row > * {
   border: 1px solid #ccc;
-}
-
-.main {
-  height: calc(100vh + 8px - #{$navbar-height} - (#{$margin-width} * 2));
-}
-
-.top-row {
-  height: 66.666%;
 }
 
 .bottom-row {
