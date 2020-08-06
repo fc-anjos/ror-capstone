@@ -6,7 +6,7 @@
 
 [entity-relationship Diagram](docs/erd.pdf)
 ### Check it online!
-[Live preview](https://calm-coast-20210.herokuapp.com/)
+[Live preview](https://felipe-ror-capstone.herokuapp.com/)
 
 ## Built With
 - Ruby v2.7.0
