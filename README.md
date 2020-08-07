@@ -1,6 +1,6 @@
-# Stay In Touch - Social media app built with Ruby on Rails
+# Realrth - Articles website built with Ruby on Rails
 
-> This repo includes code for the social media app Stay In Touch, developed as part of Microverse's Full Stack Development Program.  
+> This repo includes code for the articles website Realrth, developed as the capstone project for Ruby on Rails section of Microverse's Full Stack Web-Dev program 
 [Design idea](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) by Nelson [Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 ![index screenshot](docs/screenshot.png)
 
@@ -34,7 +34,18 @@ Postgres: >=12.3
 
 edit config/application.yml.example with your credentials, and move it to config/application.yml
 
-Start server with:
+#### Update yarn packages
+If prompted to, run:
+```
+  yarn install --check-files
+```
+
+#### Run migrations:
+
+```
+    rails db:migrate
+```
+#### Start server with:
 
 ```
     rails server
@@ -51,8 +62,8 @@ Open `http://localhost:3000/` in your browser.
 
 👤Felipe dos Anjos
 
-- Github: [@githubhandle](https://github.com/fc-anjos)
-- Linkedin: [linkedin](https://linkedin.com/in/fc-anjos)
+- Github: [fc-anjos](https://github.com/fc-anjos)
+- Linkedin: [fc-anjos](https://linkedin.com/in/fc-anjos)
 
 ## Show your support
 
