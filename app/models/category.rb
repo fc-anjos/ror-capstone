@@ -1,5 +1,7 @@
 class Category < ApplicationRecord
   extend FriendlyId
+  validates :name, length: { in: 3..15 }
+  validates :priority, uniqueness: true
   friendly_id :name, use: :slugged
 
   has_and_belongs_to_many :articles
