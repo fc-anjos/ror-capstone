@@ -3,7 +3,7 @@
 }
 
 .bottom-row {
-  height: 33.333%;
+  min-height: 33.333%;
 }
 
 .bottom-row > * {
@@ -103,4 +103,18 @@
   content: '';
   border-bottom: 2px solid $secondary;
   width: calc(100% + #{$overflow});
+}
+
+.most-voted-article-text {
+  width: 90%; //can also use calc function as per Yudi's answer
+  max-height: 15em; //can also use calc function as per Yudi's answer
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  // margin-bottom: 0.6em;
+  // line-height: 1.1em;
+}
+
+.most-voted-article-text p {
+  margin: 0;
 }

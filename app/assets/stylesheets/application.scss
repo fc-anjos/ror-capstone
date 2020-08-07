@@ -13,7 +13,7 @@ $main-height: calc(100vh + 5px - #{$navbar-height} - (#{$margin-width} * 3));
 @import './actiontext.scss';
 
 .main-height {
-  height: $main-height;
+  min-height: $main-height;
 }
 
 /* stylelint-disable selector-type-no-unknown */

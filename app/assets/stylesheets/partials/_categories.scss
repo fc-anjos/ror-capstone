@@ -38,7 +38,17 @@
   font-weight: 700;
 }
 
+.article-text {
+  width: 90%; //can also use calc function as per Yudi's answer
+  max-height: 15em; //can also use calc function as per Yudi's answer
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  // margin-bottom: 0.6em;
+  // line-height: 1.1em;
+}
+
 .article-text * {
-  margin-bottom: 0.6em;
-  line-height: 1.1em;
+  line-height: 1em;
+  text-overflow: ellipsis;
 }

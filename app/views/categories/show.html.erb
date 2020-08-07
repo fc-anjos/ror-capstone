@@ -1,8 +1,8 @@
 <div class="wrapper">
   <% @articles.each_with_index do |article, i| %>
-    <div class="article-container d-inline-block w-50 m-0 p-0">
-      <div class="article d-flex flex-row <%= 'flex-row-reverse' if i >= 2 %>">
-        <div class="square ">
+    <div class="article-container d-inline-block h-50 w-50 m-0 p-0">
+      <div class="article d-flex flex-row<%= 'flex-row-reverse' if i >= 2 %>">
+        <div class="square">
           <div class="article"
             style='background-image: url("<%= article.image.url %>");'>
           </div>
@@ -14,9 +14,9 @@
           <h3 class="article-title">
             <%= article.title %>
           </h3>
-          <div class="article-text">
-            <%= simple_format(truncate(article.text.to_plain_text, length: 500, class: 'article-text')) %>
-          </div>
+          <span class="article-text">
+            <%= simple_format(truncate(article.text.to_plain_text, length: 500 )) %>
+          </span>
           <%# <%= link_to('Read More', article_path) %1> %>
         </div>
       </div>
