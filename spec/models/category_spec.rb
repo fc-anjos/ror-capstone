@@ -18,7 +18,6 @@ RSpec.describe Category, type: :model do
       expect(category.most_recent_article).to eql(article2)
     end
 
-
     it 'And not the former one' do
       expect(category.most_recent_article).not_to eql(article1)
     end
