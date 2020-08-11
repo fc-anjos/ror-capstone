@@ -1,0 +1,61 @@
+a:hover {
+  text-decoration: none;
+}
+
+.main {
+  height: $main-height;
+}
+
+.top-row {
+  height: 66.666%;
+}
+
+.m-brown {
+  border: $margin-width solid $margin-color;
+}
+
+.notice {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.alert {
+  position: absolute;
+  top: -2px;
+  left: -6px;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+
+footer {
+  height: 80px;
+  background-color: $margin-color;
+}
+
+footer * {
+  font-size: 0.85em;
+}
+
+footer > .center > * {
+  display: inline-block;
+  margin: 0 7px 0 7px;
+}
+
+.text-brown {
+  color: $margin-color;
+}
+
+.user-interaction > *:not(:last-child) {
+  border-right: 1px solid $light;
+  margin-right: 0.4em;
+  padding-right: 0.4em;
+}
+
+.user-interaction li {
+  line-height: 1em;
+}

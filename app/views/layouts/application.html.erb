@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTemplate</title>
+    <title>realrth</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,12 @@
   </head>
 
   <body>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="m-brown">
+      <%= render '/layouts/header' %>
+      <%= yield %>
+    </div>
+      <%= render '/layouts/footer' %>
   </body>
 </html>

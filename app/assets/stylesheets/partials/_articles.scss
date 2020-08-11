@@ -1,0 +1,120 @@
+.row > * {
+  border: 1px solid #ccc;
+}
+
+.bottom-row {
+  min-height: 33.333%;
+}
+
+.bottom-row > * {
+  width: 25%;
+}
+
+.main-article {
+  width: 75%;
+  height: 100%;
+  position: relative;
+}
+
+.weather-forecast {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+
+.category {
+  text-transform: uppercase;
+}
+
+.main {
+  display: grid;
+}
+
+.gradient-bottom {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 200;
+}
+
+.gradient-top-bottom {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
+.category-title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.category-title,
+.most-voted-content {
+  margin-bottom: 20px;
+}
+
+.category-name,
+.category-title,
+.most-voted-content {
+  margin-left: 20px;
+}
+
+.category-name {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  margin-top: 20px;
+}
+
+.category-name::after {
+  $overflow: 10px;
+
+  position: relative;
+  top: 2px;
+  right: $overflow/2;
+  display: block;
+  content: '';
+  border-bottom: 2px solid $secondary;
+  width: calc(100% + #{$overflow});
+}
+
+.most-voted-article-text {
+  width: 90%; //can also use calc function as per Yudi's answer
+  max-height: 15em; //can also use calc function as per Yudi's answer
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  // margin-bottom: 0.6em;
+  // line-height: 1.1em;
+}
+
+.most-voted-article-text p {
+  margin: 0;
+}

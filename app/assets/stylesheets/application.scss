@@ -1,1 +1,42 @@
-@import 'bootstrap'
+$font-family-sans-serif: 'Cabin';
+$margin-width: 8px;
+$primary: #f76208;
+$secondary: #efee18;
+$margin-color: #4e443f;
+$light: #ccc;
+$navbar-height: 80px;
+$main-height: calc(100vh + 5px - #{$navbar-height} - (#{$margin-width} * 3));
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400, 300, 700');
+@import 'bootstrap';
+@import 'partials/*';
+@import './actiontext.scss';
+
+.main-height {
+  min-height: $main-height;
+}
+
+/* stylelint-disable selector-type-no-unknown */
+trix-editor {
+  &.custom-height {
+    min-height: 15em;
+    width: 58.5vw;
+    overflow: scroll;
+  }
+}
+
+/* stylelint-enaable selector-type-no-unknown */
+
+.trix-button--icon-increase-nesting-level,
+.trix-button--icon-decrease-nesting-level,
+.trix-button--icon-attach {
+  display: none;
+}
+
+$logo-height: 80%;
+
+.logo {
+  height: $logo-height;
+  position: relative;
+  top: calc((100% - #{$logo-height}) / 2);
+}

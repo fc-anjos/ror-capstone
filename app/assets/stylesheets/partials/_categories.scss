@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: $main-height;
+}
+
+.article {
+  display: flex;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.square {
+  border: 1px solid #ccc;
+  margin-bottom: auto;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.square .name {
+  color: $primary;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.name::after {
+  position: relative;
+  top: 2px;
+  display: block;
+  content: '';
+  border-bottom: 2px solid $primary;
+  width: calc(100%);
+}
+
+.article-title {
+  font-size: 1.3em;
+  margin: 0.5em 0 0.5em;
+  font-weight: 700;
+}
+
+.article-text {
+  width: 90%; //can also use calc function as per Yudi's answer
+  max-height: 15em; //can also use calc function as per Yudi's answer
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  // margin-bottom: 0.6em;
+  // line-height: 1.1em;
+}
+
+.article-text * {
+  line-height: 1em;
+  text-overflow: ellipsis;
+}
